@@ -1,2 +1,1 @@
-SELECT DISTINCT company_name 
-FROM Works;
+SELECT DISTINCT company_name FROM Works;
