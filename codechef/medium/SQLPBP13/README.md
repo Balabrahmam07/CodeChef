@@ -29,11 +29,11 @@ employee_id	company_name	salary
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-19T11:41:01.196Z  
+**Submitted:** 2026-07-19T11:41:53.322Z  
 
 ```sql
-SELECT DISTINCT company_name 
-FROM Works;
+SELECT DISTINCT company_name FROM Works;
+
 ```
 
 ---
