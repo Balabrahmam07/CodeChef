@@ -1,1 +1,1 @@
-SELECT product_name, category FROM Products WHERE price > 100.00
+SELECT AVG(salary) AS avg_salary FROM Works 
