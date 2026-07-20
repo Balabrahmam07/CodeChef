@@ -38,9 +38,9 @@ Output: [22,28,8,6,17,44]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.5 MB  
-**Submitted:** 2026-07-20T16:46:42.220Z  
+**Runtime:** 3 ms (beats 44.90%)  
+**Memory:** 19.5 MB (beats 15.49%)  
+**Submitted:** 2026-07-20T16:47:25.125Z  
 
 ```py
 from collections import Counter
