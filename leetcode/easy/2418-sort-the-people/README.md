@@ -44,19 +44,17 @@ Explanation: The first Bob is the tallest, followed by Alice and the second Bob.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 491 ms (beats 5.69%)  
-**Memory:** 19.5 MB (beats 97.09%)  
-**Submitted:** 2026-07-21T10:40:06.151Z  
+**Runtime:** 4 ms (beats 60.59%)  
+**Memory:** 19.7 MB (beats 52.88%)  
+**Submitted:** 2026-07-21T10:41:27.255Z  
 
 ```py
 class Solution:
-    def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
-        l = []
-        for _ in names:
-            l.append(names[heights.index(max(heights))])
-            max_idx = heights.index((max(heights)))
-            heights[max_idx] = 0
-        return l
+
+  def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
+    # Zip pairs (height, name) together, sort by height descending, then extract names
+    people = sorted(zip(heights, names), reverse=True)
+    return [name for height, name in people]
 ```
 
 ---
