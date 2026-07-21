@@ -1,1 +1,1 @@
-SELECT department, COUNT(employee_name) AS total_employees FROM Employees GROUP BY department;
+SELECT author_id, author_name, publication_name FROM Views WHERE view_count = 0 ORDER BY author_id ASC;
