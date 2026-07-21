@@ -4,18 +4,37 @@
 
 ## Problem
 
-_Description not available._
+### Article views
+### Task
+
+Write a query to retrieve the author_id, author_name, and publication_name for authors whose articles got zero views. The result should be sorted by author_id in ascending order.
+
+Return the result table sorted by id in  **ascending order**.
+
+ **Table name** : `Views`
+
+article_id	author_id	author_name	viewer_id	view_count	publication_name
+101	1	John Doe	1	3	The Daily Times
+102	2	Jane Smith	2	1	Global News
+103	3	Emily Clark	4	0	Tech Monthly
+104	4	Mark Lewis	4	2	Health Digest
+105	5	Sara White	3	0	The Business Journal
+106	1	John Doe	2	0	The Daily Times
+107	2	Jane Smith	2	2	Global News
+### Expected column
+- author_id
+- author_name
+- publication_name
 
 ## Solution
 
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-07-19T11:55:10.712Z  
+**Submitted:** 2026-07-21T09:44:10.869Z  
 
 ```sql
-SELECT department, COUNT(employee_name) AS total_employees FROM Employees GROUP BY department;
-
+SELECT author_id, author_name, publication_name FROM Views WHERE view_count = 0 ORDER BY author_id ASC;
 ```
 
 ---
