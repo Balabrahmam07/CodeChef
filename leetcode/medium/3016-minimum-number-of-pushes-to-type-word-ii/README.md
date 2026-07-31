@@ -77,22 +77,22 @@ It can be shown that no other mapping can provide a lower cost.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 96 ms (beats 76.59%)  
-**Memory:** 20.2 MB (beats 23.08%)  
-**Submitted:** 2026-07-31T10:18:16.568Z  
+**Runtime:** 92 ms (beats 85.95%)  
+**Memory:** 20 MB (beats 48.16%)  
+**Submitted:** 2026-07-31T10:18:32.477Z  
 
 ```py
 from collections import Counter
+
 class Solution:
     def minimumPushes(self, word: str) -> int:
-        word = Counter(word)
+        freq = Counter(word)
+
         count = 0
-        alpha_list = [[] for _ in range(8)]
-        for i, (wrd, freq) in enumerate(word.most_common()):
-            idx = i % 8
-            if len(alpha_list[idx]) < 8:
-                alpha_list[idx].append(wrd)
-                count += (alpha_list[idx].index(wrd) + 1) * freq
+
+        for i, (_, f) in enumerate(freq.most_common()):
+            count += (i // 8 + 1) * f
+
         return count
 ```
 
