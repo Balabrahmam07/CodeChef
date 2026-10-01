@@ -48,9 +48,9 @@ Explanation: "lee", "eet" and "ode" contain 2 vowels.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 45 ms (beats 85.11%)  
-**Memory:** 19.9 MB (beats 31.45%)  
-**Submitted:** 2026-10-01T03:10:11.485Z  
+**Runtime:** 59 ms (beats 47.02%)  
+**Memory:** 19.8 MB (beats 67.49%)  
+**Submitted:** 2026-10-01T03:13:48.415Z  
 
 ```py
 class Solution:
@@ -60,20 +60,17 @@ class Solution:
         count = 0
 
         for i in range(k):
-            if s[i] in vowels:
-                count += 1
+            count += s[i] in vowels
         
         max_count = count
 
         for right in range(k, len(s)):
 
-            if s[right] in vowels:
-                count += 1
+            count += s[right] in vowels
             
             left = right - k
 
-            if s[left] in vowels:
-                count -= 1
+            count -= s[left] in vowels
             
             max_count = max(max_count, count)
             
