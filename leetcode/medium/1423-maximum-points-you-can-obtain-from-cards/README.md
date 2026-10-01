@@ -52,9 +52,9 @@ Explanation: You have to take all the cards. Your score is the sum of points of 
 ## Solution
 
 **Language:** Python  
-**Runtime:** 20 ms (beats 54.07%)  
-**Memory:** 30.9 MB (beats 41.38%)  
-**Submitted:** 2026-10-01T07:53:37.555Z  
+**Runtime:** 19 ms (beats 67.44%)  
+**Memory:** 30.8 MB (beats 76.59%)  
+**Submitted:** 2026-10-01T08:03:43.745Z  
 
 ```py
 class Solution:
@@ -67,20 +67,20 @@ class Solution:
 
         current_window_sum = sum(cardPoints[:window_size])
         min_window_sum = current_window_sum
-        total_window_sum = current_window_sum
+        total_sum = current_window_sum
 
         left = 0
         for right in range(window_size ,n):
             
             current_window_sum += cardPoints[right] - cardPoints[left]
 
-            total_window_sum += cardPoints[right]
+            total_sum += cardPoints[right]
 
             min_window_sum = min(min_window_sum, current_window_sum)
             
             left += 1
         
-        return total_window_sum - min_window_sum
+        return total_sum - min_window_sum
 
 
 
